@@ -8,6 +8,9 @@ $digito = filter_input(INPUT_GET,'digito');
          fclose($abertura);
     }else if (($digito === "branco")){
 		$arquivo = "branco.txt"; 
+		  $abertura = fopen($arquivo, "a+");
+		  fclose($abertura);
+////////////////////////////////////////////////////////////////////////////////
 		$abertura = fopen($arquivo, "r"); 
 		$leitura = fread($abertura, filesize($arquivo));
 		fclose($abertura); 
@@ -18,6 +21,9 @@ $digito = filter_input(INPUT_GET,'digito');
 		fclose($abertura); 
     }else{
 		$arquivo = "nulo.txt"; 
+		 $abertura = fopen($arquivo, "a+");
+		fclose($abertura);
+//////////////////////////////////////////////////////////////////////////
 		$abertura = fopen($arquivo, "r"); 
 		$leitura = fread($abertura, filesize($arquivo));
 		fclose($abertura); 
